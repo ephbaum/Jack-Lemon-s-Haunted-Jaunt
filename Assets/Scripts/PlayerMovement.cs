@@ -13,14 +13,14 @@ public class PlayerMovement : MonoBehaviour
     Quaternion m_Rotation = Quaternion.identity;
 
     // Start is called before the first frame update
-    void Start ()
+    private void Start ()
     {
         m_Animator = GetComponent<Animator>();
         m_Rigidbody = GetComponent<Rigidbody>();
     }
 
     // Called in time with physics, default 50x/sec.
-    void FixedUpdate ()
+    private void FixedUpdate()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
